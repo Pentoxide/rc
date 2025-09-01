@@ -141,5 +141,7 @@ alias t=terraform
 alias tflint='terraform fmt -diff -recursive -check'
 complete -F __start_kubectl k                       
 complete -C '/usr/local/bin/aws_completer' aws
-complete -C /usr/bin/terraform terraform
-complete -C /usr/bin/terraform t
+complete -C $(which terraform) terraform
+complete -C $(which terraform) t
+
+export EDITOR=vim
